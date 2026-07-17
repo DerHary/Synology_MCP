@@ -1,0 +1,33 @@
+{
+  "name": "synology-mcp",
+  "version": "0.1.0",
+  "description": "A modular MCP server for Synology DSM, File Station, Calendar, Note Station, Contacts, Chat, Download Station, and Container Manager.",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "node --watch --loader ts-node/esm src/server.ts",
+    "smoke": "node dist/smoke.js"
+  },
+  "keywords": [
+    "mcp",
+    "synology",
+    "dsm",
+    "calendar",
+    "notes",
+    "docker"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "dotenv": "^16.6.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
